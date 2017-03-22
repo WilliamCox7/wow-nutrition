@@ -79,7 +79,8 @@ body {
 }
 
 .intro-paragraph button,
-.offer button {
+.offer button,
+.lectures button {
   position: absolute;
   margin-top: 82px;
   background: rgba(255,255,255,0.9);
@@ -93,11 +94,13 @@ body {
 
 .offer button {
   margin-top: 60px;
+  right: 0;
 }
 
 button:hover,
 button:focus {
-  background: #f4201b;
+  background: #079d1a;
+  border: none;
   color: white;
 }
 
@@ -159,7 +162,7 @@ button:hover {
 .navbar {
   font-family: SegoeUI, Segoe UI;
   font-weight: lighter;
-  color: gray;
+  color: #079d1a;
   height: 74px;
   font-size: 24px;
   margin: 0px 32px;
@@ -177,7 +180,7 @@ button:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: calc(100% - 1150px);
+  margin-top: 58px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
@@ -212,7 +215,6 @@ button:hover {
 
 .enrollment h2 {
   color: gray;
-  color: gray;
   width: 430px;
   padding: 15px 0px 6px 0px;
   font-size: 15px;
@@ -223,6 +225,7 @@ button:hover {
   width: 600px;
   font-family: SegoeUI, Segoe UI;
   color: #b3b3b3;
+  position: relative;
   z-index: 1;
 }
 
@@ -236,12 +239,6 @@ button:hover {
 
 .star {
   margin-top: 20px;
-}
-
-@media (max-width: 1360px) {
-  .offer-info {
-    margin-top: 58px;
-  }
 }
 
 @media (max-width: 1160px) {
@@ -324,8 +321,71 @@ button:hover {
   }
 }
 
-@media (min-width: 1410px) {
-  .offer-info {
-    margin-top: 135px;
-  }
+.lectures {
+  font-family: SegoeUI, Segoe UI;
+  color: #b3b3b3;
+  position: relative;
+  z-index: 1;
+}
+
+.lectures h2 {
+  color: gray;
+  padding: 15px 0px 6px 0px;
+  font-size: 19px;
+}
+
+.lectures .lecture-info {
+  width: 600px;
+}
+
+.lectures .lecture-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.lectures .lecture-info-header {
+  border-bottom: solid 2px gainsboro;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lectures .lecture-info-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.lecture-series p,
+.lecture-sched p {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.lecture-picture {
+  background: url('../src/veg3.jpg');
+  background-size: cover;
+  position: relative;
+  margin-right: -50px;
+  width: 600px;
+  height: 450px;
+}
+
+.lectures button {
+  position: absolute;
+  margin-top: 330px;
 }

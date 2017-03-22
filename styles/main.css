@@ -53,9 +53,9 @@ body {
   height: 180px;
   background: url('../src/profile.jpg');
   background-size: cover;
+  background-position: -75px;
   border-radius: 50%;
-  border: solid 1px gainsboro;
-  box-shadow: 1px 2px 6px gainsboro;
+  box-shadow: 4px 4px 25px #9c9c9c;
 }
 
 .intro-paragraph {
@@ -78,7 +78,8 @@ body {
   font-family: SegoeUI, Segoe UI;
 }
 
-.intro-paragraph button {
+.intro-paragraph button,
+.offer button {
   position: absolute;
   margin-top: 82px;
   background: rgba(255,255,255,0.9);
@@ -88,6 +89,10 @@ body {
   color: gray;
   font-size: 14px;
   font-family: SegoeUI, Segoe UI;
+}
+
+.offer button {
+  margin-top: 60px;
 }
 
 button:hover,
@@ -168,24 +173,36 @@ button:hover {
           justify-content: space-between;
 }
 
+.offer-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: calc(100% - 1150px);
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .canOffer {
   width: 300px;
   font-family: SegoeUI, Segoe UI;
   color: #b3b3b3;
-  position: absolute;
-  margin-top: 130px;
-  margin-left: 180px;
   z-index: 1;
 }
 
-.canOffer p {
+.canOffer p,
+.enrollment p {
   font-size: 13px;
   padding: 10px 0px 0px 0px;
   line-height: 17px;
   font-weight: lighter;
 }
 
-.canOffer h1 {
+.enrollment p {
+  margin-top: -2px;
+}
+
+.canOffer h1,
+.enrollment h1 {
   padding-bottom: 7px;
   margin-bottom: -3px;
   font-size: 17px;
@@ -193,9 +210,122 @@ button:hover {
   border-bottom: solid 2px #f5f5f5;
 }
 
+.enrollment h2 {
+  color: gray;
+  color: gray;
+  width: 430px;
+  padding: 15px 0px 6px 0px;
+  font-size: 15px;
+  border-bottom: solid 2px #f5f5f5;
+}
+
+.enrollment {
+  width: 600px;
+  font-family: SegoeUI, Segoe UI;
+  color: #b3b3b3;
+  z-index: 1;
+}
+
 .offer-background {
   left: 0;
   bottom: 0;
   position: absolute;
   width: 650px;
+  margin: 20px;
+}
+
+.star {
+  margin-top: 20px;
+}
+
+@media (max-width: 1360px) {
+  .offer-info {
+    margin-top: 58px;
+  }
+}
+
+@media (max-width: 1160px) {
+  html {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  body {
+    position: relative;
+  	height: 1060px;
+  	margin-bottom: 60px;
+  	margin-top: 60px;
+  }
+  .offer-background {
+  	margin: 0px;
+    margin-left: calc((100% - 700px)/2);
+  	width: 700px;
+  }
+  .canOffer {
+    width: 600px;
+    margin-bottom: 50px;
+  }
+  .offer-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.phone-view {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .offer-background {
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+  .canOffer {
+    width: 90%;
+  }
+  .enrollment {
+    width: 90%;
+  }
+  .enrollment h2 {
+    width: 90%;
+  }
+  .navbar {
+    width: 90%;
+    margin: auto;
+  }
+  .phone-view {
+    display: block;
+  }
+  .desktop-view {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .offer button {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .canOffer {
+    margin-bottom: 40px;
+  }
+  .offer-info {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1410px) {
+  .offer-info {
+    margin-top: 135px;
+  }
 }

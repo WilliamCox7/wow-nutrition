@@ -1,24 +1,21 @@
 html {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #f1f1f1;
 }
 
 body {
   position: absolute;
   height: 85%;
+  min-height: 800px;
   width: 90%;
   box-shadow: 0px 0px 5px gainsboro;
   max-width: 1400px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  margin-bottom: 60px;
+  margin-top: 60px;
   background: white;
 }
 
@@ -62,6 +59,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -78,12 +76,23 @@ body {
   font-family: SegoeUI, Segoe UI;
 }
 
-.intro-paragraph button,
 .offer button,
 .lectures button {
   position: absolute;
-  margin-top: 82px;
   background: rgba(255,255,255,0.9);
+  padding: 13px 17px;
+  border: solid 1px gainsboro;
+  border-radius: 6px;
+  color: gray;
+  font-size: 14px;
+  font-family: SegoeUI, Segoe UI;
+}
+
+.intro-paragraph button {
+  margin-top: 25px;
+  position: relative;
+  background: rgba(255,255,255,0.9);
+  width: 115px;
   padding: 13px 17px;
   border: solid 1px gainsboro;
   border-radius: 6px;
@@ -115,15 +124,15 @@ button:hover {
   bottom: 0;
 }
 
-@media(max-width: 1125px) {
+@media (max-width: 1390px) {
   .home-intro {
-    margin-top: -50px;
+    margin-top: 215px;
   }
 }
 
-@media(max-width: 955px) {
+@media (max-width: 885px) {
   .home-intro {
-    margin-top: -250px;
+    margin-top: 120px;
   }
 }
 
@@ -194,14 +203,19 @@ button:hover {
 
 .canOffer p,
 .enrollment p {
-  font-size: 13px;
+  font-size: 15px;
   padding: 10px 0px 0px 0px;
-  line-height: 17px;
+  line-height: 19px;
   font-weight: lighter;
 }
 
 .enrollment p {
   margin-top: -2px;
+}
+
+.enrollment span {
+  color: #079d1a;
+  font-weight: bold;
 }
 
 .canOffer h1,
@@ -247,14 +261,10 @@ button:hover {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  body {
-    position: relative;
-  	height: 1060px;
-  	margin-bottom: 60px;
-  	margin-top: 60px;
-  }
   .offer-background {
   	margin: 0px;
+    margin-top: 40px;
+    position: relative;
     margin-left: calc((100% - 700px)/2);
   	width: 700px;
   }
@@ -281,6 +291,7 @@ button:hover {
   .offer-background {
     width: 100%;
     margin: 0px;
+    margin-top: 40px;
   }
 }
 
@@ -306,13 +317,10 @@ button:hover {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .offer button {
     margin-top: 40px;
   }
-}
-
-@media (max-width: 400px) {
   .canOffer {
     margin-bottom: 40px;
   }
@@ -324,6 +332,7 @@ button:hover {
 .lectures {
   font-family: SegoeUI, Segoe UI;
   color: #b3b3b3;
+  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -336,12 +345,15 @@ button:hover {
 
 .lectures .lecture-info {
   width: 600px;
+  margin-top: 30px;
 }
 
 .lectures .lecture-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+  height: calc(100% - 190px);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -376,16 +388,70 @@ button:hover {
   line-height: 18px;
 }
 
-.lecture-picture {
-  background: url('../src/veg3.jpg');
-  background-size: cover;
-  position: relative;
+.lecture-content img {
+  width: 100%;
+  margin-top: 70px;
+  padding: 20px;
+  max-width: 650px;
   margin-right: -50px;
-  width: 600px;
-  height: 450px;
 }
 
 .lectures button {
   position: absolute;
-  margin-top: 330px;
+  margin-top: 28px;
+}
+
+.lectures span {
+  color: gray;
+  font-style: italic;
+  display: none;
+}
+
+@media (max-width: 1390px) {
+  body {
+    height: initial;
+  }
+  .lectures {
+    height: 910px;
+  }
+  .lecture-content img {
+    margin: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: 70px;
+  }
+  .lectures .lecture-info {
+    margin: auto;
+    margin-top: 30px;
+  }
+  .lectures .lecture-content {
+    height: auto;
+    display: block;
+    /*-webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;*/
+  }
+}
+
+@media (max-width: 735px) {
+  .lectures .lecture-info {
+    width: 90%;
+  }
+}
+
+@media (max-width: 660px) {
+  .lecture-sched {
+    display: none;
+  }
+  .lectures span {
+    display: inline;
+  }
+  .lectures h2:nth-child(2) {
+    display: none;
+  }
+  .lectures {
+    height: 855px;
+  }
 }

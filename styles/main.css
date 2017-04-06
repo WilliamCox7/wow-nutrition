@@ -4,7 +4,7 @@ html {
   background: #f1f1f1;
 }
 
-body {
+.home-body {
   position: absolute;
   height: 85%;
   min-height: 800px;
@@ -34,7 +34,7 @@ body {
 }
 
 .home-intro {
-  width: 542px;
+  width: 600px;
   z-index: 1;
   position: relative;
   display: -webkit-box;
@@ -52,7 +52,7 @@ body {
   background-size: cover;
   background-position: -75px;
   border-radius: 50%;
-  box-shadow: 4px 4px 25px #9c9c9c;
+  box-shadow: 4px 2px 15px #9c9c9c;
 }
 
 .intro-paragraph {
@@ -69,7 +69,7 @@ body {
 }
 
 .intro-paragraph p {
-  width: 310px;
+  width: 380px;
   color: gray;
   font-size: 14px;
   line-height: 20px;
@@ -109,7 +109,7 @@ body {
 button:hover,
 button:focus {
   background: #079d1a;
-  border: none;
+  border-color: #079d1a;
   color: white;
 }
 
@@ -124,18 +124,6 @@ button:hover {
   bottom: 0;
 }
 
-@media (max-width: 1390px) {
-  .home-intro {
-    margin-top: 215px;
-  }
-}
-
-@media (max-width: 885px) {
-  .home-intro {
-    margin-top: 120px;
-  }
-}
-
 @media(max-width: 722px) {
   .home-background {
     width: 100%;
@@ -144,7 +132,11 @@ button:hover {
 }
 
 @media(max-width: 700px) {
+  .home-body {
+    min-height: 94%;
+  }
   .home-intro {
+    margin-top: -200px;
     width: inherit;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -158,9 +150,25 @@ button:hover {
     margin-top: -28px;
     margin-bottom: 25px;
   }
-  .intro-paragraph {
-    margin-left: 20px;
+  .intro-paragraph p {
+    text-align: justify;
+    width: 311px;
   }
+}
+
+.offer-body {
+  position: absolute;
+  height: 85%;
+  min-height: 800px;
+  width: 90%;
+  box-shadow: 0px 0px 5px gainsboro;
+  max-width: 1400px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
 }
 
 .offer {
@@ -183,6 +191,11 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.navbar .desktop-view:hover,
+.navbar .phone-view:hover {
+  cursor: pointer;
 }
 
 .offer-info {
@@ -256,6 +269,14 @@ button:hover {
 }
 
 @media (max-width: 1160px) {
+  .offer-body {
+    height: inherit;
+    min-height: inherit;
+    top: inherit;
+    bottom: inherit;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
   html {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -327,6 +348,21 @@ button:hover {
   .offer-info {
     margin-top: 40px;
   }
+}
+
+.lectures-body {
+  position: absolute;
+  height: 85%;
+  min-height: 800px;
+  width: 90%;
+  box-shadow: 0px 0px 5px gainsboro;
+  max-width: 1400px;
+  margin: auto;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
 }
 
 .lectures {
@@ -409,8 +445,13 @@ button:hover {
 }
 
 @media (max-width: 1390px) {
-  body {
-    height: initial;
+  .lectures-body {
+    height: inherit;
+    min-height: inherit;
+    top: inherit;
+    bottom: inherit;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   .lectures {
     height: 910px;
